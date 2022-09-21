@@ -29,7 +29,13 @@ export class UsersService {
     return user;
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    const user = await this.usersRepository.findOne(id);
+
+    if (!user) {
+      throw new NotFoundError('Usuário não encontrado');
+    }
+
     return this.usersRepository.update(id, updateUserDto);
   }
 
