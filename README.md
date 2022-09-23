@@ -2,9 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -29,7 +26,7 @@
 ## Installation
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Running the app
@@ -56,6 +53,35 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Heroku
+
+```bash
+# install CLI
+npm install -g heroku
+```
+
+```bash
+# login
+heroku login
+```
+
+```bash
+# list apps
+heroku apps --all
+```
+
+```bash
+# create app
+heroku create api-nestjs-prisma-fracanabia
+```
+
+```bash
+# set variable environment (need to install devDependencies)
+heroku config:set NPM_CONFIG_PRODUCTION=false
+# set variable environment (need to node run mode production)
+heroku config:set NODE_ENV=production
 ```
 
 ## Support
